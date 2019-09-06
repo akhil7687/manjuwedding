@@ -70,7 +70,7 @@
           <%=image_tag "ft-icon.png"%></p>
           <p class="quote-content">"When i saw you i fell in love, and you smiled because you knew."</p>
           <p class="quote-author">Willian Shakespeare</p>
-          <audio loop onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 2000)">
+          <audio loop muted onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 2000)">
             <source src="<%= asset_path 'valaga.mp3'%>">
           </audio>
       </footer>
