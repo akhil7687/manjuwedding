@@ -1,0 +1,85 @@
+<!-- Main Content
+================================================== -->
+<div id="body" class="viewport animated">
+  <div class="container">
+    <div class="boxed-content">
+      <!-- Header -->
+      <header id="header" class="navbar navbar-default navbar-static-top" >
+        <div class="clearfix">
+            <!-- logo -->
+            <div class="hd-logo">
+              <a href="index.html">
+                <%=image_tag "logo_small.png"%>
+              </a>
+            </div>
+            <!-- /logo -->
+            <!-- responsive menu -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Navigation Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- /responsive menu -->
+            <!-- menu -->
+            <nav class="hd-nav nav navbar-nav navbar-right navbar-collapse collapse">
+              <ul class="nav navbar-nav hd-list-menu clearfix">
+              </ul>
+            </nav>
+            <!-- /menu -->
+        </div>
+      </header>
+      <!-- /header -->
+      <!-- content -->
+      <div class="page-content page-home">
+        <!-- home logo -->
+        <div class="row">
+          <div class="home-logo col-sm-8 col-sm-offset-2">
+            <p class="couple-title">Manju & Deshi</p>
+          </div>
+        </div>
+        <!-- /home-logo -->
+        <!-- Countdown container -->
+        <div class="row">
+          <div class="countdown-container">
+            <!-- icon -->
+            <div class="countdown-icon">
+              <%=image_tag "ico-heart2.png"%>
+            </div>
+            <!-- /icon -->
+            <!-- countdown title top -->
+            <h2 class="countdown-title countdown-title1"><span class="countdown-title-borders">November 03, 2019 in AMARASHREE Hall, Sullia</span></h2>
+            <!-- /countdown title top -->
+            <!-- countdown ( Edit it on main.js )-->
+            <div class="row">
+              <div class="col-xs-8 col-xs-offset-2">
+                <div id="countdown" class="row"></div>
+              </div>
+            </div>
+            <!-- /countdown -->
+            <!-- countdown title bot -->
+            <h3 class="countdown-title countdown-title2"><span class="countdown-title-borders">Until we get Married!</span></h3>
+            <!-- countdown title /bot -->
+          </div>
+        </div>
+        <!-- /Countdown Container -->
+      </div>
+      <!-- /content -->
+
+      <%=render "home/about"%>
+
+      <%=render "home/ceramony"%>
+
+      <!-- footer -->
+      <footer id="footer">
+        <p class="footer-icon">
+          <%=image_tag "ft-icon.png"%></p>
+          <p class="quote-content">"When i saw you i fell in love, and you smiled because you knew."</p>
+          <p class="quote-author">Willian Shakespeare</p>
+      </footer>
+      <!-- /footer -->
+    </div>
+  </div>
+</div>
+<!-- /Main Content
+================================================== -->

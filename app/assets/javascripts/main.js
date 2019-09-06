@@ -4,14 +4,14 @@
 
 //======= Run on Window Load ============
 $('.loading-wrapper').css({'visibility': 'visible'}).animate({opacity: '1'}, 600);
-$(window).load(function(){ 
+$(window).load(function(){
 
   //loader and Intro Animations
   $('.animated').css({'opacity': 0});
 	$('#page-loader').delay(1000).fadeOut(400, function(){
 	  $('#body').addClass('fadeInUp');
-	}); 	
-  
+	});
+
 
   //Viewport
   var windowHeight = $(window).height();
@@ -28,7 +28,7 @@ $(window).load(function(){
   });
 
   var $container = $('#mansonry');
-  // initialize Masonry after all images have loaded  
+  // initialize Masonry after all images have loaded
   $container.imagesLoaded( function() {
     $container.masonry({
       itemSelector: '.mansonry-item'
@@ -41,23 +41,23 @@ $(window).load(function(){
   owlCarousel.owlCarousel({
     navigation : true, // Show next and prev buttons
     slideSpeed : 300,
-    paginationSpeed : 400,      
+    paginationSpeed : 400,
     responsiveRefreshRate : 200,
     responsiveBaseWidth: window,
     pagination: false,
-    singleItem: false,  
-    items: 3,  
+    singleItem: false,
+    items: 3,
     autoPlay: 8000,
     loop: true,
     //autoplayTimeout: 1000,
-    navigationText: ["<span class='fa fa-chevron-left'></span>","<span class='fa fa-chevron-right'></span>"], 
+    navigationText: ["<span class='fa fa-chevron-left'></span>","<span class='fa fa-chevron-right'></span>"],
     afterAction: function(el){
      //remove class active
      this.$owlItems.removeClass('active');
      //add class active
-     this.$owlItems.eq(this.currentItem +1).addClass('active')    
-    }  
-  });  
+     this.$owlItems.eq(this.currentItem +1).addClass('active')
+    }
+  });
 });
 
 
@@ -65,7 +65,7 @@ $(window).load(function(){
 $(document).ready(function(){
 
 //=====>  Countdown (Edit this with your own date)  <====
-$("#countdown").countdown("2019/12/22", function(event) {
+$("#countdown").countdown("2019/11/03", function(event) {
   var $this = $(this).html(event.strftime(''
      + '<div class="countdown-col-wrapper col-xs-3"><div class="countdown-col"><span class="countdown-time"> %-D </span> Days </div></div> '
      + '<div class="countdown-col-wrapper col-xs-3"><div class="countdown-col"><span class="countdown-time"> %H </span> Hours </div></div>'
@@ -95,7 +95,7 @@ $('.hd-list-menu li').on({
         $(this).find('> ul').fadeOut(200);
     }
 });
-                
+
 
 //Home Slideshow
 $('.bg-slideshow').cycle({
@@ -180,8 +180,8 @@ $("#contactForm").validate({
             $("#contactError").hide();
 
            // $("#contactForm #name, #contactForm #email, #contactForm #subject, #contactForm #message")
-             // fadeOut(400);        
-            
+             // fadeOut(400);
+
           } else {
             $('#contactForm').slideUp(300);
             $("#contactError").fadeIn(300);

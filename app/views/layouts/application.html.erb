@@ -6,6 +6,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="<%=asset_path('apple-touch-icon.png')%>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%=asset_path('favicon-32x32.png')%>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%=asset_path('favicon-16x16.png')%>">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
     <link href='//fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
 		<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 
@@ -14,6 +21,34 @@
   </head>
 
   <body>
+    <!-- Page Loader
+    ========================================================= -->
+    <div class="loader" id="page-loader">
+      <div class="loading-wrapper">
+        <div class="loader-heart loader-heart1"><%=image_tag "intro-heart.png" %></div>
+        <div class="loader-heart loader-heart2"><%=image_tag "intro-heart.png" %></div>
+        <div class="loader-heart loader-heart3"><%=image_tag "intro-heart.png" %></div>
+      </div>
+    </div>
+    <!-- /End of Page loader
+    ========================================================= -->
+
+    <!-- === PAGE BACKGROUND === -->
+    <!-- Background container -->
+    <div class="page-background-container viewport">
+      <!-- background-mask -->
+      <div class="bg-mask viewport"></div>
+      <!-- /background-mask -->
+      <!-- background-slideshow -->
+      <div class="bg-slideshow">
+        <!-- slideshow-item -->
+        <div class="page-background viewport" style="background-image: url('<%= asset_path 'slide-bg1.jpg'%>')"></div>
+        <!-- /slideshow-item -->
+      </div>
+      <!--/Background-slideshow -->
+    </div>
+    <!-- Background-container -->
+    <!-- === /PAGE BACKGROUND === -->
     <%= yield %>
   </body>
 </html>

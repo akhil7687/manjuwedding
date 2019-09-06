@@ -22,7 +22,7 @@
 //= require smoothScroll
 //= require placeholders.jquery.min
 //= require owl.carousel.js
-//= require corss-browser
+//= require cross-browser
 //= require main
 //= require holder
 //= require_self
