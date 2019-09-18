@@ -4,6 +4,8 @@
 
 //======= Run on Window Load ============
 $('.loading-wrapper').css({'visibility': 'visible'}).animate({opacity: '1'}, 600);
+var playing = false;
+
 $(window).load(function(){
 
   //loader and Intro Animations
@@ -12,9 +14,21 @@ $(window).load(function(){
   $(".play_container").click(function(){
     $('#page-loader').delay(100).fadeOut(400, function(){
       $(".player").trigger("play");
+      playing = true;
       $('#body').addClass('fadeInUp');
-
     });
+  });
+
+  $(".speaker").click(function(){
+    if (playing == true) {
+      $(".player").trigger("pause");
+      $(".speaker").attr("src",$(".speaker").attr('mute'));
+      playing = false;
+    }else{
+      $(".player").trigger("play");
+      $(".speaker").attr("src",$(".speaker").attr('spk'));
+      playing = true;
+    }
   });
 
   //Viewport
