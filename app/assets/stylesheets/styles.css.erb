@@ -2070,3 +2070,46 @@ textarea.form-control {
 .ie8 #page-loader {
   display: none!important
 }
+
+.play_container{
+  position:absolute;
+  left:44%;
+  top:55%;
+  text-align:center;
+  border:2px solid #fff;
+  border-radius:5px;
+  padding:10px 35px;
+  cursor:pointer;
+}
+
+.play_container .fa-play{
+  color:#fff;
+  font-size:30px;
+  margin-top: 5px;
+}
+
+.play_container .play_text{
+  font-size:30px;
+  color:#fff;
+  font-weight:bold;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 5px;
+}
+
+.play_container:hover{
+  background: #fff;
+}
+
+.play_container:hover .fa-play{
+  color: #d1837e;
+}
+
+.play_container:hover .play_text{
+  color: #d1837e;
+}
+
+@media screen and (max-width: 640px){
+  .play_container{
+    left: 30%;
+  }
+}

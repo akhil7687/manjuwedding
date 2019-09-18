@@ -8,10 +8,14 @@ $(window).load(function(){
 
   //loader and Intro Animations
   $('.animated').css({'opacity': 0});
-	$('#page-loader').delay(1000).fadeOut(400, function(){
-	  $('#body').addClass('fadeInUp');
-	});
 
+  $(".play_container").click(function(){
+    $('#page-loader').delay(100).fadeOut(400, function(){
+      $(".player").trigger("play");
+      $('#body').addClass('fadeInUp');
+
+    });
+  });
 
   //Viewport
   var windowHeight = $(window).height();
