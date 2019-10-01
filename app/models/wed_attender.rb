@@ -1,0 +1,2 @@
+class WedAttender < ApplicationRecord
+end
