@@ -1,0 +1,22 @@
+<div id="body" class="viewport animated">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Marked On</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%WedAttender.order("created_at desc").each_with_index do |att,index|%>
+        <tr>
+          <td><%=(index+1)%></td>
+          <td><%=att.att_name%></td>
+          <td><%=att.status_name%></td>
+          <td><%=att.created_at%></td>
+        </tr>
+      <%end%>
+    </tbody>
+  </table>
+</div>
