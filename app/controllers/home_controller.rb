@@ -15,7 +15,7 @@ class HomeController < ApplicationController
   def mark_stat
 
     cookie_id = cookies[:visitor_cookie] || DateTime.now.strftime('%Q')
-    cookies[:visitor_cookie] = cookie_id
+    cookies[:visitor_cookie] = { value: cookie_id, expires: 1.year }
     wd = WedAttender.where("cookie_id=?",cookie_id).take
     if wd.blank?
       wd = WedAttender.new
@@ -24,7 +24,8 @@ class HomeController < ApplicationController
     wd.status = params[:stat]
     wd.cookie_id = cookie_id
     wd.save
-    cookies[:att_status] = wd.status
+
+    cookies[:att_status] = { value: wd.status, expires: 1.year }
 
     respond_to do |format|
       format.js
